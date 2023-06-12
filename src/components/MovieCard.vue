@@ -1,8 +1,8 @@
 <template>
-  <div class="card">
+  <RouterLink class="card" :to="path">
     <img :src="poster" alt="Movie">
     <span class="card-name" v-html="title"></span>
-  </div>
+  </RouterLink>
 </template>
 
 <script>
@@ -10,12 +10,14 @@ export default {
   props: {
     poster: { type: String, default: "" },
     name: { type: String, default: "" },
-    highlight: { type: String, default: "" }
+    highlight: { type: String, default: "" },
+    path: { type: [String, Object], default: "" }
   },
   computed: {
     title() {
-      if (!this.highlight) return this.name;
-      return this.name.replace(new RegExp(`(${this.highlight})`, "gi"), "<mark>$1</mark>")
+      if (!this.highlight)
+        return this.name;
+      return this.name.replace(new RegExp(`(${this.highlight})`, "gi"), "<mark>$1</mark>");
     }
   }
 }
