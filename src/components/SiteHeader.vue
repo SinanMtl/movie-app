@@ -1,14 +1,14 @@
 <template>
   <header class="header">
     <div class="container">
-      <img src="img/logo.svg" alt="Logo">
+      <img src="/img/logo.svg" alt="Logo">
 
       <nav>
         <a href="#">Movies</a>
         <a href="#">TV Shows</a>
         <a href="#">
           Suggest Me
-          <img src="img/arrow-right.svg" alt="Arrow">
+          <img src="/img/arrow-right.svg" alt="Arrow">
         </a>
       </nav>
     </div>
